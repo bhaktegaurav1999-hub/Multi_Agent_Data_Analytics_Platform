@@ -1,6 +1,6 @@
 # 🤖 Multi-Agent Data Analytics & Insights Platform
 
-An AI-powered Business Intelligence platform that combines **Data Analytics, Machine Learning, Data Visualization, and Multi-Agent AI Systems** to analyze business performance and generate actionable insights.
+An AI-powered Business Intelligence platform combining **Data Analytics, Machine Learning, Data Visualization, and Multi-Agent AI Systems** to analyze business performance and generate actionable insights.
 
 Built using Python, Streamlit, LangGraph, LangChain, and Ollama.
 
@@ -8,11 +8,11 @@ Built using Python, Streamlit, LangGraph, LangChain, and Ollama.
 
 ## 📌 Project Overview
 
-This project demonstrates how multiple specialized AI agents can collaborate to analyze business data, evaluate machine learning results, generate visualizations, and prepare business intelligence reports.
+This project demonstrates how multiple specialized AI agents collaborate to analyze business data, evaluate machine learning results, generate visualizations, and prepare comprehensive business intelligence reports.
 
 The platform uses a supervisor-based architecture and a collaborative multi-agent workflow to process user queries and deliver analytical insights.
 
-It also integrates a locally running Large Language Model (LLM) to generate natural-language explanations of Python-validated findings.
+It also integrates locally running Large Language Models (LLMs) to generate natural-language explanations of Python-validated findings.
 
 ---
 
@@ -24,7 +24,7 @@ It also integrates a locally running Large Language Model (LLM) to generate natu
 - Average Order Value (AOV).
 - Dynamic filters for region, product category, customer segment, and date.
 - Interactive business performance visualizations.
-- Monthly sales trend analysis.
+- Dynamic monthly sales trend analysis.
 
 ### 2. Data Analyst Agent
 - Sales performance analysis.
@@ -53,6 +53,7 @@ It also integrates a locally running Large Language Model (LLM) to generate natu
 - Coordinates Data Analyst, ML Analyst, and Visualization agents.
 
 ### 6. Multi-Agent Collaboration
+
 A LangGraph-powered workflow where multiple agents collaborate sequentially:
 
 - Data Analyst Agent
@@ -73,30 +74,30 @@ The workflow combines analytical results, machine learning outputs, and visualiz
 ## 🏗️ System Architecture
 
 ```text
-                     USER
-                       |
-                       v
-                STREAMLIT APP
-                       |
-             +---------+---------+
-             |                   |
-             v                   v
-       SUPERVISOR AGENT    COLLABORATION WORKFLOW
-             |                   |
-       +-----+------+       +----+---------+
-       |     |      |       |      |       |
-       v     v      v       v      v       v
-      DATA   ML  VISUAL   DATA     ML    VISUAL
-    ANALYST ANALYST AGENT ANALYST ANALYST AGENT
-       |     |      |       |      |       |
-       +-----+------+       +------+-------+
-             |                     |
-             v                     v
-       ANALYTICAL RESULTS       LLM REPORT
-                                     |
-                                     v
-                           BUSINESS INSIGHTS
-                           & RECOMMENDATIONS
+                         USER
+                           |
+                           v
+                    STREAMLIT APP
+                           |
+              +------------+------------+
+              |                         |
+              v                         v
+       SUPERVISOR AGENT          COLLABORATION WORKFLOW
+              |                         |
+       +------+------+           +------+------+
+       |      |      |           |      |      |
+       v      v      v           v      v      v
+      DATA    ML   VISUAL       DATA    ML   VISUAL
+    ANALYST ANALYST AGENT     ANALYST ANALYST AGENT
+       |      |      |           |      |      |
+       +------+------+           +------+------+
+              |                         |
+              v                         v
+       ANALYTICAL RESULTS           LLM REPORT
+                                         |
+                                         v
+                               BUSINESS INSIGHTS
+                               & RECOMMENDATIONS
 ```
 
 ---
@@ -134,6 +135,10 @@ Multi_Agent_Data_Analytics_Platform/
 │
 ├── data/
 │   └── sales_data.csv
+│
+├── screenshots/
+│   ├── dashboard.png
+│   └── multi_agent_analysis.png
 │
 ├── app.py
 ├── generate_data.py
@@ -189,7 +194,7 @@ The Machine Learning Agent uses a Random Forest Regressor.
 - R² Score
 - Feature Importance
 
-**Note:** The dataset is synthetic, and the strong model performance reflects the structure of this generated dataset. It should not be interpreted as proven real-world forecasting performance.
+**Note:** The dataset is synthetic. The strong model performance reflects the structure of this generated dataset and should not be interpreted as proven real-world forecasting accuracy.
 
 ---
 
@@ -234,7 +239,7 @@ pip install -r requirements.txt
 
 ### Step 5: Install Ollama Models
 
-Install Ollama from:
+Download and install Ollama:
 
 https://ollama.com/
 
@@ -248,7 +253,7 @@ ollama pull llama3.2:3b
 ollama pull qwen3:4b
 ```
 
-Ensure Ollama is running before using the LLM-powered features.
+Ensure the Ollama service is running before using the LLM-powered features.
 
 ### Step 6: Run the Application
 
@@ -262,7 +267,13 @@ The application will open in your browser at the local Streamlit address display
 
 ## 📸 Application Screenshots
 
-Screenshots of the application dashboard and multi-agent analysis will be added here.
+### 1. Business Intelligence Dashboard
+
+![Business Intelligence Dashboard](screenshots/dashboard.png)
+
+### 2. Multi-Agent Business Intelligence
+
+![Multi-Agent Business Intelligence](screenshots/multi_agent_analysis.png)
 
 ---
 
