@@ -266,8 +266,6 @@ else:
             "Average Order Value",
             f"₹{average_order_value:,.2f}"
         )
-
-
 # ==================================================
 # 9. FILTERED BUSINESS VISUALIZATIONS
 # ==================================================
@@ -360,7 +358,8 @@ with st.expander("View Filtered Sales Dataset"):
         hide_index=True,
     )
 
-    # ==================================================
+
+# ==================================================
 # 11. INTERACTIVE SALES PREDICTION
 # ==================================================
 
@@ -452,8 +451,6 @@ else:
         "No monthly sales data available "
         "for the selected filters."
     )
-
-
 # ==================================================
 # 13. ANALYTICS ASSISTANT
 # ==================================================
@@ -672,8 +669,7 @@ if st.session_state.analysis_result is not None:
 
     else:
         st.write(analysis_result)
-
-        # ==================================================
+# ==================================================
 # 15. MULTI-AGENT BUSINESS INTELLIGENCE
 # ==================================================
 
@@ -863,7 +859,7 @@ if st.session_state.collaboration_result is not None:
 
                 st.image(
                     str(chart_path),
-                    width="stretch",
+                    width=250,
                 )
 
             else:
